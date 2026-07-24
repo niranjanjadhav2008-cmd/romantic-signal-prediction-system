@@ -19,7 +19,7 @@ CATEGORY_SVG = {
         <circle cx="65" cy="85" r="8" fill="white"/>
         <circle cx="95" cy="85" r="8" fill="white"/>
         <circle cx="125" cy="85" r="8" fill="white"/>
-        <rect x="55" y="130" width="110" height="45" rx="15" fill="#c026d3" opacity="0.7"/>
+        <rect x="55" y="130" width="110" height="45" rx ="15" fill="#c026d3" opacity="0.7"/>
         <polygon points="145,130 160,110 130,130" fill="#c026d3" opacity="0.7"/>
         <circle cx="85" cy="153" r="6" fill="white" opacity="0.8"/>
         <circle cx="110" cy="153" r="6" fill="white" opacity="0.8"/>
