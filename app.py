@@ -316,6 +316,13 @@ st.markdown("""
     margin-top : 20px;
     margin-bottom : 20px;
 }
+.question-title {
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    color: white;
+}
 @media (max-width: 900px) {
     .left-panel, .right-panel {
         display: none;
@@ -327,7 +334,7 @@ st.markdown("""
 .small-text{
     color: #BBBBBB;
     font-size: 14px;
-}                       
+}                   
 </style>
 """,unsafe_allow_html=True)
 if "step" not in st.session_state:
