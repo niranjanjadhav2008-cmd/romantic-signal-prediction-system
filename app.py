@@ -163,7 +163,14 @@ st.markdown("""
     font-size: 11px;
     color: #ff4b91;
     font-weight: 600;
-}</style>""", unsafe_allow_html=True)
+}
+/* Hide floating panels on small screens */
+@media (max-width: 900px) {
+    .left-panel, .right-panel {
+        display: none;
+    }
+}
+</style>""", unsafe_allow_html=True)
 with st.sidebar:
     st.markdown("""
     <style>
@@ -309,12 +316,13 @@ st.markdown("""
     margin-top : 20px;
     margin-bottom : 20px;
 }
-.question-title {
-    font-size: 34px;
-    font-weight: 700;
-    line-height: st1.4;
-    margin-bottom: 25px;
-    color: white;
+@media (max-width: 900px) {
+    .left-panel, .right-panel {
+        display: none;
+    }
+    .question-title {
+        font-size: 24px;
+    }
 }
 .small-text{
     color: #BBBBBB;
