@@ -52,8 +52,9 @@ TONE EXAMPLES:
 - Bad: "You should work on effort balance."  
 - Good: "Your {worst_trait} is the weak link here — stop being the one who always texts first and see what happens."
 """
-    response = client.chat.completions.create(model="llama-3.1-8b-instant",messages=[{"role": "user", "content": prompt}],
-        max_tokens=1024)
+    response = client.chat.completions.create(model="openai/gpt-oss-20b", messages=[{"role": "user", "content": prompt}],
+    max_tokens=2048, reasoning_effort="low")
+
     return response.choices[0].message.content
 def chat_with_cupidai(message,chat_history,rule_based_percentage,ml_percentage,communication_pct,emotional_bond_pct,attraction_pct,
     social_interest_pct,effort_balance_pct,best_trait,worst_trait):
@@ -90,5 +91,5 @@ YOUR RULES:
     for msg in chat_history:
         messages.append(msg)
     messages.append({"role": "user", "content": message})
-    response = client.chat.completions.create(model="llama-3.1-8b-instant",messages=messages,max_tokens=300)
+    response = client.chat.completions.create(model="openai/gpt-oss-20b", messages=messages,max_tokens=1024, reasoning_effort="low")
     return response.choices[0].message.content
